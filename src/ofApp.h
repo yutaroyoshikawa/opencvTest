@@ -22,6 +22,16 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+  
+  const int WIDTH = ofGetWidth();
+  const int HEIGHT = ofGetHeight();
+  
+  ofImage img;
   ofVideoGrabber webCam;
+  ofxCvColorImage colorImg;
+  ofxCvGrayscaleImage grayImage;
+  ofxCvHaarFinder finder;
+  
+  cv::Mat srcImg;
+  cv::Mat processImg;
 };
